@@ -9,7 +9,9 @@ class TopButtons extends StatelessWidget {
   final IconData icon;
   final Color iconColor;
 
+  // ignore: prefer_const_constructors_in_immutables
   TopButtons({
+    super.key,
     required this.title,
     required this.count,
     required this.icon,
@@ -27,8 +29,8 @@ class TopButtons extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           border:
-              Border.all(color: Color.fromARGB(255, 233, 233, 233), width: 1),
-          borderRadius: BorderRadius.all(Radius.circular(7)),
+              Border.all(color: const Color.fromARGB(255, 233, 233, 233), width: 1),
+          borderRadius: const BorderRadius.all(Radius.circular(7)),
         ),
         child: Padding(
           padding: const EdgeInsets.all(8.0),

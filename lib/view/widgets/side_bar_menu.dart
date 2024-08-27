@@ -32,6 +32,7 @@ Widget sideMenuBar() {
   );
 }
 
+// ignore: must_be_immutable
 class MenuIcons extends StatelessWidget {
   IconData? icon;
   Color? color;
@@ -41,7 +42,7 @@ class MenuIcons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Icon(icon, color: color != null ? color : Colors.grey),
+      child: Icon(icon, color: color ?? Colors.grey),
     );
   }
 }
